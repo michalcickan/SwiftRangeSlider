@@ -471,6 +471,12 @@ import QuartzCore
     return true
   }
   
+  override open func cancelTracking(with event: UIEvent?) {
+        super.cancelTracking(with: event)
+        
+        endTracking(nil, with: event)
+    }
+  
   /**
    Triggers on the end of touch of the `RangeSlider` and sets the button layers `highlighted` property to `false`.
    */
